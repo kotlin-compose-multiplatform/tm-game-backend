@@ -16,6 +16,8 @@ import CreateCategoryDto from './dto/create-category.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import UpdateCategoryDto from './dto/update-category.dto';
 import UserGuard from '../user/user.guard';
+import { extname } from 'path';
+import { diskStorage } from 'multer';
 
 @Controller('category')
 export class CategoryController {
@@ -25,7 +27,10 @@ export class CategoryController {
   @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
-      dest: 'upload',
+      storage: diskStorage({
+        destination: 'upload',
+        filename: editFileName,
+      }),
     }),
   )
   addCategory(
@@ -47,7 +52,10 @@ export class CategoryController {
   @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
-      dest: 'upload',
+      storage: diskStorage({
+        destination: 'upload',
+        filename: editFileName,
+      }),
     }),
   )
   updateCategoryImage(
@@ -68,3 +76,13 @@ export class CategoryController {
     return this.categoryService.deleteCategory(+id);
   }
 }
+
+export const editFileName = (req, file, callback) => {
+  const name = file.originalname.split('.')[0];
+  const fileExtName = extname(file.originalname);
+  const randomName = Array(4)
+    .fill(null)
+    .map(() => Math.round(Math.random() * 16).toString(16))
+    .join('');
+  callback(null, `${name}-${randomName}${fileExtName}`);
+};

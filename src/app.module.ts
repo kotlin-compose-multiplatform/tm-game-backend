@@ -18,9 +18,14 @@ import PaymantHistoryEntity from './modules/paymant-history/entity/payment-histo
 import { AppJwtModule } from './modules/jwt/jwt.module';
 import { KeyModule } from './modules/key/key.module';
 import { Key } from './modules/key/entities/key.entity';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'upload'),
+    }),
     TypeOrmModule.forRoot({
       type: 'postgres',
       port: 5432,

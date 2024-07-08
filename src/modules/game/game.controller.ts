@@ -19,6 +19,8 @@ import UpdateGameDto from './dto/update-game.dto';
 import GetGamesDto from './dto/get-games.dto';
 import UserGuard from '../user/user.guard';
 import ClientGuard from '../user/client.guard';
+import { diskStorage } from 'multer';
+import { editFileName } from '../category/category.controller';
 
 @Controller('game')
 export class GameController {
@@ -34,7 +36,10 @@ export class GameController {
   @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
-      dest: 'upload/game/video',
+      storage: diskStorage({
+        destination: 'upload/game/video',
+        filename: editFileName,
+      }),
     }),
   )
   addGameVideo(
@@ -48,7 +53,10 @@ export class GameController {
   @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
-      dest: 'upload/game/image',
+      storage: diskStorage({
+        destination: 'upload/game/image',
+        filename: editFileName,
+      }),
     }),
   )
   addGameImage(
