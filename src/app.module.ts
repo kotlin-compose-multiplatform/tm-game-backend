@@ -15,6 +15,9 @@ import UserEntity from './modules/user/entity/user.entity';
 import GameEntity from './modules/game/entity/game.entity';
 import GameAssets from './modules/game/entity/game-assets.entity';
 import PaymantHistoryEntity from './modules/paymant-history/entity/payment-history.entity';
+import { AppJwtModule } from './modules/jwt/jwt.module';
+import { KeyModule } from './modules/key/key.module';
+import { Key } from './modules/key/entities/key.entity';
 
 @Module({
   imports: [
@@ -33,10 +36,12 @@ import PaymantHistoryEntity from './modules/paymant-history/entity/payment-histo
         GameEntity,
         GameAssets,
         PaymantHistoryEntity,
+        Key,
       ],
       synchronize: true,
       logging: true,
     }),
+    AppJwtModule,
     ClientModule,
     PricingModule,
     ServerModule,
@@ -44,6 +49,7 @@ import PaymantHistoryEntity from './modules/paymant-history/entity/payment-histo
     UserModule,
     PaymantHistoryModule,
     GameModule,
+    KeyModule,
   ],
   controllers: [],
   providers: [],

@@ -10,6 +10,11 @@ export default class PaymantHistoryEntity {
   @Column()
   amount: number;
 
+  @Column({
+    default: false,
+  })
+  with_key: boolean;
+
   @ManyToOne(() => ClientEntity, (client) => client.payment)
   client: ClientEntity;
 

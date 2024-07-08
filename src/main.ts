@@ -10,7 +10,9 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
   });
+
   app.useGlobalPipes(new ValidationPipe());
+
   await app.listen(process.env.APP_PORT);
 }
 bootstrap().then(() => {

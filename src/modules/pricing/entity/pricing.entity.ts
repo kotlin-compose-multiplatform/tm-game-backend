@@ -8,7 +8,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-enum ClientType {
+export enum ClientType {
   NONE = 'NONE',
   BASIC = 'BASIC',
   ADVANCED = 'ADVANCED',

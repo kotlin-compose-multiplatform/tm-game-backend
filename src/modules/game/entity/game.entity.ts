@@ -35,7 +35,9 @@ export default class GameEntity {
   @Column()
   desc_ru: string;
 
-  @OneToMany(() => GameAssets, (assets) => assets.game)
+  @OneToMany(() => GameAssets, (assets) => assets.game, {
+    onDelete: 'CASCADE',
+  })
   assets?: GameAssets[];
 
   @Column()
@@ -48,10 +50,10 @@ export default class GameEntity {
   steam_id: string;
 
   @ManyToMany(() => ServerEntity, (server) => server.game)
-  server: ServerEntity[];
+  server?: ServerEntity[];
 
   @ManyToOne(() => CategoryEntity, (category) => category.game)
-  category: CategoryEntity;
+  category?: CategoryEntity;
 
   @CreateDateColumn()
   created_at: Date;

@@ -1,4 +1,11 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import GameEntity from './game.entity';
 
 export enum AssetsType {
@@ -21,6 +28,14 @@ export default class GameAssets {
   })
   type: AssetsType;
 
-  @ManyToOne(() => GameEntity, (game) => game.assets)
+  @ManyToOne(() => GameEntity, (game) => game.assets, {
+    onDelete: 'CASCADE',
+  })
   game: GameEntity;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }

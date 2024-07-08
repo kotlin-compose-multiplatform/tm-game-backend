@@ -4,11 +4,19 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinTable,
   ManyToMany,
   ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+
+export enum ServerType {
+  NONE = 'NONE',
+  BASIC = 'BASIC',
+  ADVANCED = 'ADVANCED',
+  BUISNESS = 'BUISNESS',
+}
 
 @Entity()
 export default class ServerEntity {
@@ -39,10 +47,18 @@ export default class ServerEntity {
   @Column()
   speed: number;
 
+  @Column({
+    type: 'enum',
+    enum: ServerType,
+    default: ServerType.BASIC,
+  })
+  type: ServerType;
+
   @ManyToOne(() => CategoryEntity, (category) => category.server)
   category?: CategoryEntity;
 
   @ManyToMany(() => GameEntity, (game) => game.server)
+  @JoinTable()
   game?: GameEntity[];
 
   @CreateDateColumn()

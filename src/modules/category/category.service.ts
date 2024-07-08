@@ -4,12 +4,15 @@ import CategoryEntity from './entity/category.entity';
 import CreateCategoryDto from './dto/create-category.dto';
 import { Repository } from 'typeorm';
 import UpdateCategoryDto from './dto/update-category.dto';
+import GameEntity from '../game/entity/game.entity';
 
 @Injectable()
 export class CategoryService {
   constructor(
     @InjectRepository(CategoryEntity)
     private readonly categoryRepo: Repository<CategoryEntity>,
+    @InjectRepository(GameEntity)
+    private readonly gameRepo: Repository<GameEntity>,
   ) {}
 
   async addCategory(
@@ -56,8 +59,49 @@ export class CategoryService {
     }
   }
 
-  async getAll(): Promise<CategoryEntity[]> {
-    return await this.categoryRepo.find();
+  async getAll(): Promise<any[]> {
+    const categories = await this.categoryRepo.find();
+    const result: any[] = [];
+    for (let i = 0; i < categories.length; i++) {
+      const games = await this.gameRepo.find({
+        loadEagerRelations: true,
+        loadRelationIds: false,
+        relations: {
+          assets: true,
+        },
+        select: {
+          title_tm: true,
+          title_ru: true,
+          title_en: true,
+          id: true,
+          assets: {
+            url: true,
+            type: true,
+          },
+        },
+        where: {
+          category: categories[i],
+        },
+      });
+      result.push({
+        category: {
+          ...categories[i],
+          image: process.env.BASE_URL + '/' + categories[i].image,
+        },
+        games: games.map((it) => {
+          return {
+            ...it,
+            assets: it.assets.map((v) => {
+              return {
+                ...v,
+                url: process.env.BASE_URL + '/' + v.url,
+              };
+            }),
+          };
+        }),
+      });
+    }
+    return result;
   }
 
   async deleteCategory(id: number) {

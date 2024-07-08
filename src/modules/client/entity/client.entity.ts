@@ -9,7 +9,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-enum ClientType2 {
+export enum ClientType2 {
   NONE = 'NONE',
   BASIC = 'BASIC',
   ADVANCED = 'ADVANCED',
@@ -50,7 +50,7 @@ export default class ClientEntity {
   @Column({
     type: 'enum',
     enum: ClientType2,
-    default: ClientType2.BASIC,
+    default: ClientType2.NONE,
   })
   clientType?: ClientType2;
 
