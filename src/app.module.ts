@@ -24,7 +24,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'upload'),
+      rootPath: join(__dirname, '..', ''),
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
