@@ -113,7 +113,9 @@ export class GameService {
       if (body.categoryId) {
         where = {
           ...where,
-          category: await this.categoryRepo.findOneBy({ id: body.categoryId }),
+          category: {
+            id: body.categoryId,
+          },
         };
       }
 

@@ -80,7 +80,9 @@ export class CategoryService {
           },
         },
         where: {
-          category: categories[i],
+          category: {
+            id: categories[i].id,
+          },
         },
       });
       result.push({
