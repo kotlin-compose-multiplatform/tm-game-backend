@@ -12,6 +12,11 @@ import GameAssets from './game-assets.entity';
 import ServerEntity from 'src/modules/server/entity/server.entity';
 import CategoryEntity from 'src/modules/category/entity/category.entity';
 
+export enum GameLocation {
+  LOCAL = 'LOCAL',
+  GLOBAL = 'GLOBAL',
+}
+
 @Entity()
 export default class GameEntity {
   @PrimaryGeneratedColumn()
@@ -54,6 +59,13 @@ export default class GameEntity {
 
   @ManyToOne(() => CategoryEntity, (category) => category.game)
   category?: CategoryEntity;
+
+  @Column({
+    type: 'enum',
+    enum: GameLocation,
+    default: GameLocation.LOCAL,
+  })
+  location: GameLocation;
 
   @CreateDateColumn()
   created_at: Date;

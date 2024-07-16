@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { config } from 'dotenv';
 import { ValidationPipe } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 config();
 
@@ -10,6 +11,16 @@ async function bootstrap() {
   app.enableCors({
     origin: '*',
   });
+
+  const options = new DocumentBuilder()
+    .setTitle('Tm Game API')
+    .setDescription('The games API description')
+    .setVersion('1.0')
+    .addTag('game')
+    .addBearerAuth()
+    .build();
+  const document = SwaggerModule.createDocument(app, options);
+  SwaggerModule.setup('docs', app, document);
 
   app.useGlobalPipes(new ValidationPipe());
 

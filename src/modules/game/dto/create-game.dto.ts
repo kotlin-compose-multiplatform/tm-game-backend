@@ -1,4 +1,5 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { IsIn, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import { GameLocation } from '../entity/game.entity';
 
 export default class CreateGameDto {
   @IsString()
@@ -40,4 +41,8 @@ export default class CreateGameDto {
   @IsNotEmpty()
   @IsNumber()
   category_id: number;
+
+  @IsNotEmpty()
+  @IsIn([GameLocation.LOCAL, GameLocation.GLOBAL])
+  location: GameLocation;
 }

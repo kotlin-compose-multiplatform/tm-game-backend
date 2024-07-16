@@ -28,6 +28,7 @@ export class GameService {
       game.title_en = body.title_en;
       game.title_ru = body.title_ru;
       game.title_tm = body.title_tm;
+      game.location = body.location;
       game.category = await this.categoryRepo.findOne({
         where: {
           id: body.category_id,
@@ -84,6 +85,7 @@ export class GameService {
       if (body.site_url) game.site_url = body.site_url;
       if (body.star) game.star = body.star;
       if (body.steam_id) game.steam_id = body.steam_id;
+      if (body.location) game.location = body.location;
       if (body.category_id) {
         game.category = await this.categoryRepo.findOne({
           where: {
@@ -116,6 +118,13 @@ export class GameService {
           category: {
             id: body.categoryId,
           },
+        };
+      }
+
+      if (body.location) {
+        where = {
+          ...where,
+          location: body.location,
         };
       }
 

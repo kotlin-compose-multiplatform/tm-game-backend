@@ -21,6 +21,7 @@ import { Key } from './modules/key/entities/key.entity';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { NewsModule } from './modules/news/news.module';
+import { News } from './modules/news/entities/news.entity';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { NewsModule } from './modules/news/news.module';
         GameAssets,
         PaymantHistoryEntity,
         Key,
+        News,
       ],
       synchronize: true,
       logging: true,
