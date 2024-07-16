@@ -20,6 +20,7 @@ import { KeyModule } from './modules/key/key.module';
 import { Key } from './modules/key/entities/key.entity';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { NewsModule } from './modules/news/news.module';
 
 @Module({
   imports: [
@@ -55,6 +56,7 @@ import { join } from 'path';
     PaymantHistoryModule,
     GameModule,
     KeyModule,
+    NewsModule,
   ],
   controllers: [],
   providers: [],

@@ -1,0 +1,2 @@
+@Entity
+export class News {}
