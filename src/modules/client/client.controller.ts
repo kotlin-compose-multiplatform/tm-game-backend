@@ -24,4 +24,11 @@ export class ClientController {
     const client = req['client'];
     return this.clientService.payWithKey(key, +client['id']);
   }
+
+  @Post('check-payment')
+  @UseGuards(ClientGuard)
+  checkPayment(@Req() req: Express.Request) {
+    const client = req['client'];
+    return this.clientService.checkPaymant(+client['id']);
+  }
 }

@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   UseGuards,
 } from '@nestjs/common';
 import { ServerService } from './server.service';
@@ -13,6 +14,8 @@ import CreateServerDto from './dto/create-server.dto';
 import CreateGameServerDto from './dto/create-game-server.dto';
 import UpdateServerDto from './dto/update-server.dto';
 import UserGuard from '../user/user.guard';
+import { ServerLocation } from './entity/server.entity';
+import ClientGuard from '../user/client.guard';
 
 @Controller('server')
 export class ServerController {
@@ -50,7 +53,13 @@ export class ServerController {
 
   @Get('get-servers')
   @UseGuards(UserGuard)
-  getServers() {
-    return this.serverService.getServers();
+  getServers(@Query('location') location: ServerLocation | undefined) {
+    return this.serverService.getServers(location);
+  }
+
+  @Get('get-client-servers')
+  @UseGuards(ClientGuard)
+  getClientServers(@Query('location') location: ServerLocation | undefined) {
+    return this.serverService.getServers(location);
   }
 }

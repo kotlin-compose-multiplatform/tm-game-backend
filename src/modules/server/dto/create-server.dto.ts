@@ -1,5 +1,5 @@
 import { IsIn, IsNotEmpty, IsNumber, IsString } from 'class-validator';
-import { ServerType } from '../entity/server.entity';
+import { ServerLocation, ServerType } from '../entity/server.entity';
 
 export default class CreateServerDto {
   @IsString()
@@ -39,4 +39,7 @@ export default class CreateServerDto {
   @IsString()
   @IsIn([ServerType.BASIC, ServerType.ADVANCED, ServerType.BUISNESS])
   type: ServerType;
+
+  @IsIn([ServerLocation.LOCAL, ServerLocation.GLOBAl])
+  location: ServerLocation;
 }

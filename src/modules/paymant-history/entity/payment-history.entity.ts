@@ -1,6 +1,13 @@
 import ClientEntity from 'src/modules/client/entity/client.entity';
 import PricingEntity from 'src/modules/pricing/entity/pricing.entity';
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity()
 export default class PaymantHistoryEntity {
@@ -20,4 +27,10 @@ export default class PaymantHistoryEntity {
 
   @ManyToOne(() => PricingEntity, (pricing) => pricing.payment)
   pricing: PricingEntity;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 }

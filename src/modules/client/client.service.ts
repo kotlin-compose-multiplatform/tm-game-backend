@@ -1,6 +1,9 @@
 import {
   BadRequestException,
+  HttpException,
+  HttpStatus,
   Injectable,
+  NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
 import { Repository } from 'typeorm';
@@ -11,6 +14,8 @@ import AppJwtService from '../jwt/jwt.service';
 import SignInDto from './dto/sign-in.dto';
 import { PayloadType } from '../jwt/jwt.payload';
 import { Key } from '../key/entities/key.entity';
+import PaymantHistoryEntity from '../paymant-history/entity/payment-history.entity';
+import PricingEntity, { ClientType } from '../pricing/entity/pricing.entity';
 
 @Injectable()
 export class ClientService {
@@ -19,6 +24,10 @@ export class ClientService {
     private readonly clientRepo: Repository<ClientEntity>,
     @InjectRepository(Key)
     private readonly keyRepo: Repository<Key>,
+    @InjectRepository(PaymantHistoryEntity)
+    private readonly historyRepo: Repository<PaymantHistoryEntity>,
+    @InjectRepository(PricingEntity)
+    private readonly pricingRepo: Repository<PricingEntity>,
     private readonly jwt: AppJwtService,
   ) {}
 
@@ -78,6 +87,25 @@ export class ClientService {
         await this.clientRepo.save(client);
         k.used = true;
         await this.keyRepo.save(k);
+        const history = new PaymantHistoryEntity();
+        const pricing = await this.pricingRepo.findOne({
+          where: {
+            clientType:
+              k.client_type == ClientType.ADVANCED
+                ? ClientType.ADVANCED
+                : k.client_type == ClientType.BUISNESS
+                  ? ClientType.BUISNESS
+                  : ClientType.BASIC,
+          },
+          order: {
+            updated_at: 'DESC',
+          },
+        });
+        history.amount = pricing.price;
+        history.client = client;
+        history.pricing = pricing;
+        history.with_key = true;
+        await this.historyRepo.save(history);
         return {
           ...client,
           token: this.jwt.generateToken({
@@ -118,4 +146,54 @@ export class ClientService {
       throw err;
     }
   }
+
+  async checkPaymant(userId: number) {
+    try {
+      const user = await this.clientRepo.findOneBy({
+        id: userId,
+      });
+      if (user) {
+        const history = await this.historyRepo.findOne({
+          where: {
+            client: {
+              id: user.id,
+            },
+          },
+          order: {
+            updated_at: 'DESC',
+          },
+        });
+        console.log(history);
+        const days = Math.abs(
+          dateDifferenceInDays(new Date(), history.updated_at),
+        );
+
+        if (Math.ceil(days) > 31) {
+          throw new HttpException(
+            `Payment expire ${Math.ceil(days) - 30} days before`,
+            HttpStatus.PAYMENT_REQUIRED,
+          );
+        } else {
+          return {
+            history,
+            user,
+            days: Math.ceil(31 - days),
+          };
+        }
+      } else {
+        throw new NotFoundException('User not found');
+      }
+    } catch (err) {
+      throw new BadRequestException(err + '');
+    }
+  }
+}
+
+function dateDifferenceInDays(date1: Date, date2: Date): number {
+  const differenceInTime = date2.getTime() - date1.getTime();
+
+  // Convert the difference from milliseconds to days
+  const differenceInDays = differenceInTime / (1000 * 3600 * 24);
+
+  return differenceInDays;
 }

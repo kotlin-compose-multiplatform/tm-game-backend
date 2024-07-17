@@ -18,6 +18,11 @@ export enum ServerType {
   BUISNESS = 'BUISNESS',
 }
 
+export enum ServerLocation {
+  LOCAL = 'LOCAL',
+  GLOBAl = 'GLOBAL',
+}
+
 @Entity()
 export default class ServerEntity {
   @PrimaryGeneratedColumn()
@@ -60,6 +65,13 @@ export default class ServerEntity {
   @ManyToMany(() => GameEntity, (game) => game.server)
   @JoinTable()
   game?: GameEntity[];
+
+  @Column({
+    type: 'enum',
+    enum: ServerLocation,
+    default: ServerLocation.LOCAL,
+  })
+  location: ServerLocation;
 
   @CreateDateColumn()
   created_at: Date;

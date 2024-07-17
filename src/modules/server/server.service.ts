@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import ServerEntity from './entity/server.entity';
+import ServerEntity, { ServerLocation } from './entity/server.entity';
 import { Repository } from 'typeorm';
 import CategoryEntity from '../category/entity/category.entity';
 import CreateServerDto from './dto/create-server.dto';
@@ -31,6 +31,7 @@ export class ServerService {
       server.server_username = body.server_username;
       server.speed = body.speed;
       server.type = body.type;
+      server.location = body.location;
       if (body.categoryId) {
         server.category = await this.categoryRepo.findOne({
           where: {
@@ -56,6 +57,7 @@ export class ServerService {
       if (body.server_username) server.server_username = body.server_username;
       if (body.speed) server.speed = body.speed;
       if (body.type) server.type = body.type;
+      if (body.location) server.location = body.location;
       if (body.categoryId) {
         server.category = await this.categoryRepo.findOne({
           where: {
@@ -129,8 +131,11 @@ export class ServerService {
     }
   }
 
-  async getServers() {
+  async getServers(location: ServerLocation | undefined) {
     return await this.serverRepo.find({
+      where: {
+        location: location,
+      },
       order: {
         created_at: 'DESC',
       },

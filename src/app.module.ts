@@ -22,6 +22,8 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { NewsModule } from './modules/news/news.module';
 import { News } from './modules/news/entities/news.entity';
+import { GameServerModule } from './modules/game-server/game-server.module';
+import { GameServer } from './modules/game-server/entities/game-server.entity';
 
 @Module({
   imports: [
@@ -45,6 +47,7 @@ import { News } from './modules/news/entities/news.entity';
         PaymantHistoryEntity,
         Key,
         News,
+        GameServer,
       ],
       synchronize: true,
       logging: true,
@@ -59,6 +62,7 @@ import { News } from './modules/news/entities/news.entity';
     GameModule,
     KeyModule,
     NewsModule,
+    GameServerModule,
   ],
   controllers: [],
   providers: [],
