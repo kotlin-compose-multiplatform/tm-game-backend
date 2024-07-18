@@ -141,8 +141,11 @@ export class GameService {
         relations: {
           assets: true,
           category: true,
+          server: true,
         },
+        loadEagerRelations: true,
         select: {
+          server: true,
           assets: true,
           category: {
             id: true,
