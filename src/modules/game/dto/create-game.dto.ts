@@ -39,10 +39,6 @@ export default class CreateGameDto {
   steam_id: string;
 
   @IsNotEmpty()
-  @IsNumber()
-  category_id: number;
-
-  @IsNotEmpty()
   @IsIn([GameLocation.LOCAL, GameLocation.GLOBAL])
   location: GameLocation;
 }
