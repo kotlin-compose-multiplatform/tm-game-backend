@@ -50,7 +50,7 @@ export class ClientService {
       } else {
         const newClient = new ClientEntity();
         newClient.email = body.email;
-        newClient.fullname = body.fullname;
+        newClient.fullname = body.username;
         newClient.password = body.password;
         newClient.phone = body.phone;
         newClient.stream_id = body.stream_id;
@@ -139,6 +139,21 @@ export class ClientService {
             },
           }),
         };
+      } else {
+        throw new UnauthorizedException('User not found');
+      }
+    } catch (err) {
+      throw err;
+    }
+  }
+
+  async resetPassword(email: string) {
+    try {
+      const user = await this.clientRepo.findOneBy({
+        email: email,
+      });
+      if (user) {
+        // send mail password
       } else {
         throw new UnauthorizedException('User not found');
       }

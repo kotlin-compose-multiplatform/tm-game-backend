@@ -11,10 +11,6 @@ export default class SignUpDto {
 
   @IsString()
   @IsNotEmpty()
-  fullname: string;
-
-  @IsString()
-  @IsNotEmpty()
   phone: string;
 
   @IsString()
