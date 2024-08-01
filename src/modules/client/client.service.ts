@@ -154,6 +154,10 @@ export class ClientService {
       });
       if (user) {
         // send mail password
+        return {
+          success: true,
+          message: `Mail sent to ${email}. Check your mail accounts`,
+        };
       } else {
         throw new UnauthorizedException('User not found');
       }
