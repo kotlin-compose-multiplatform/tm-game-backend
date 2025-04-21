@@ -1,0 +1,272 @@
+[
+    {
+      "name_tm": "Hereketli",
+      "name_ru": "Экшен",
+      "name_en": "Action",
+      "desc_tm": "Dinamiki söweş we çalt depgindäki oýun tejribesi bolan oýunlar.",
+      "desc_ru": "Игры с динамичными боями и быстрым геймплеем.",
+      "desc_en": "Games featuring dynamic combat and fast-paced gameplay.",
+      "image_url": "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Başdan geçirmeler",
+      "name_ru": "Приключения",
+      "name_en": "Adventure",
+      "desc_tm": "Gözleglere, tapmaçalara we hekaýa esaslanýan oýunlara üns beriň.",
+      "desc_ru": "Сосредоточьтесь на исследовании, головоломках и сюжетном геймплее.",
+      "desc_en": "Focus on exploration, puzzles, and narrative-driven gameplay.",
+      "image_url": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Rol oýunlary (RPG)",
+      "name_ru": "Ролевые игры (РПГ)",
+      "name_en": "Role-Playing (RPG)",
+      "desc_tm": "Gahryman ösüşi, hekaýa we çuňňur dünýä gurşawy.",
+      "desc_ru": "Развитие персонажа, сюжет и захватывающий мир.",
+      "desc_en": "Character progression, storytelling, and immersive worlds.",
+      "image_url": "https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Strategiýa",
+      "name_ru": "Стратегии",
+      "name_en": "Strategy",
+      "desc_tm": "Meýilleşdirmegi, taktiki pikirlenmegi we resurslary dolandyrmagy talap edýän oýunlar.",
+      "desc_ru": "Игры, требующие планирования, тактического мышления и управления ресурсами.",
+      "desc_en": "Games requiring planning, tactical thinking, and resource management.",
+      "image_url": "https://images.unsplash.com/photo-1585506942812-e72b29cef752?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Simulýatorlar",
+      "name_ru": "Симуляторы",
+      "name_en": "Simulation",
+      "desc_tm": "Hakyky dünýädäki işleri ýa-da ulgamlary takyk görkezýän oýunlar.",
+      "desc_ru": "Игры, точно имитирующие реальные действия или системы.",
+      "desc_en": "Games that accurately simulate real-world activities or systems.",
+      "image_url": "https://images.unsplash.com/photo-1607513746994-51f730a44832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Sport",
+      "name_ru": "Спорт",
+      "name_en": "Sports",
+      "desc_tm": "Hakyky ýa-da fantaziýa sport görnüşlerini simulýasiýa ediň.",
+      "desc_ru": "Симуляция реальных или вымышленных видов спорта.",
+      "desc_en": "Simulate real-world or fantasy sports.",
+      "image_url": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Ýaryşlar",
+      "name_ru": "Гонки",
+      "name_en": "Racing",
+      "desc_tm": "Ýokary tizlikli bäsdeşlik we dürli ulaglar bilen sürmek.",
+      "desc_ru": "Скоростные соревнования и вождение различных транспортных средств.",
+      "desc_en": "High-speed competition and driving various vehicles.",
+      "image_url": "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Tapmaçalar",
+      "name_ru": "Головоломки",
+      "name_en": "Puzzle",
+      "desc_tm": "Logika, strategiýa ýa-da nagyş tanamak arkaly problemalary çözüň.",
+      "desc_ru": "Решайте проблемы с помощью логики, стратегии или распознавания образов.",
+      "desc_en": "Solve problems using logic, strategy, or pattern recognition.",
+      "image_url": "https://images.unsplash.com/photo-1580913428735-bd3c269d6a82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Platformerler",
+      "name_ru": "Платформеры",
+      "name_en": "Platformer",
+      "desc_tm": "Bökmek, ylgamak we päsgelçiliklerden geçmek.",
+      "desc_ru": "Прыжки, бег и преодоление препятствий.",
+      "desc_en": "Jumping, running, and navigating obstacles.",
+      "image_url": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Söweş oýunlary",
+      "name_ru": "Файтинги",
+      "name_en": "Fighting",
+      "desc_tm": "Ýakyn söweşde bir-biri bilen ýüzbe-ýüz söweş.",
+      "desc_ru": "Поединки один на один в ближнем бою.",
+      "desc_en": "One-on-one combat focusing on close-quarters fighting.",
+      "image_url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Şuterler",
+      "name_ru": "Шутеры",
+      "name_en": "Shooter",
+      "desc_tm": "Ýarag ulanyp, duşmanlary ýok etmäge gönükdirilen oýunlar.",
+      "desc_ru": "Игры, сосредоточенные на уничтожении врагов с использованием огнестрельного оружия.",
+      "desc_en": "Games focused on eliminating enemies using firearms.",
+      "image_url": "https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Gizlinlik (Stels)",
+      "name_ru": "Стелс",
+      "name_en": "Stealth",
+      "desc_tm": "Duşmanlardan gaça durmak we gizlenmek arkaly maksatlara ýetmek.",
+      "desc_ru": "Достижение целей путем избегания обнаружения врагами.",
+      "desc_en": "Achieve objectives by avoiding enemy detection.",
+      "image_url": "https://images.unsplash.com/photo-1511512578047-dba3678d9a23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Diri galmak",
+      "name_ru": "Выживание",
+      "name_en": "Survival",
+      "desc_tm": "Resurslary ýygnamak we duşmançylykly gurşawda diri galmak.",
+      "desc_ru": "Сбор ресурсов и выживание во враждебной среде.",
+      "desc_en": "Gather resources and stay alive in hostile environments.",
+      "image_url": "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Gorkuly (Horror)",
+      "name_ru": "Хоррор (Ужасы)",
+      "name_en": "Horror",
+      "desc_tm": "Oýunçyny gorkuzmak ýa-da dartgynlylyk döretmek üçin döredilen.",
+      "desc_ru": "Созданы, чтобы напугать или вызвать напряжение у игрока.",
+      "desc_en": "Designed to scare or create tension for the player.",
+      "image_url": "https://images.unsplash.com/photo-1496309732348-3627f3f040ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "MMORPG",
+      "name_ru": "MMORPG",
+      "name_en": "MMORPG",
+      "desc_tm": "Köp sanly oýunçynyň onlaýn dünýäde gatnaşýan rol oýunlary.",
+      "desc_ru": "Ролевые игры с большим количеством игроков в онлайн-мире.",
+      "desc_en": "Role-playing games with large numbers of players in an online world.",
+      "image_url": "https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "MOBA",
+      "name_ru": "MOBA",
+      "name_en": "MOBA",
+      "desc_tm": "Iki toparyň kartadaky strategiki söweşlerde bäsleşýän oýunlary.",
+      "desc_ru": "Две команды соревнуются в стратегических боях на карте.",
+      "desc_en": "Two teams compete in strategic battles on a map.",
+      "image_url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Hakyky wagtly strategiýa (RTS)",
+      "name_ru": "Стратегии в реальном времени (RTS)",
+      "name_en": "Real-Time Strategy (RTS)",
+      "desc_tm": "Oýunçylar bir wagtda hereket edýärler, nobata garaşmaýarlar.",
+      "desc_ru": "Игроки действуют одновременно, не дожидаясь своей очереди.",
+      "desc_en": "Players act simultaneously, without waiting for turns.",
+      "image_url": "https://images.unsplash.com/photo-1585506942812-e72b29cef752?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Guwly ýaşyk (Sandbox)",
+      "name_ru": "Песочница (Sandbox)",
+      "name_en": "Sandbox",
+      "desc_tm": "Oýunçylara az maksatly döredijilik we gözleg azatlygyny berýär.",
+      "desc_ru": "Предоставляет игрокам свободу творчества и исследования с минимальными целями.",
+      "desc_en": "Gives players freedom for creativity and exploration with minimal objectives.",
+      "image_url": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Açyk dünýä",
+      "name_ru": "Открытый мир",
+      "name_en": "Open World",
+      "desc_tm": "Oýunçynyň erkin gezmegi üçin uly we çäksiz dünýä.",
+      "desc_ru": "Большой и неограниченный мир для свободного исследования игроком.",
+      "desc_en": "A large, unrestricted world for the player to roam freely.",
+      "image_url": "https://images.unsplash.com/photo-1608889825103-eb5c14b9c887?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Adaty (Casual)",
+      "name_ru": "Казуальные",
+      "name_en": "Casual",
+      "desc_tm": "Ýönekeý oýun mehanikasy we gysga oýun sessiýalary bolan elýeterli oýunlar.",
+      "desc_ru": "Доступные игры с простой механикой и короткими игровыми сессиями.",
+      "desc_en": "Accessible games with simple mechanics and short play sessions.",
+      "image_url": "https://images.unsplash.com/photo-1580913428735-bd3c269d6a82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Indi",
+      "name_ru": "Инди",
+      "name_en": "Indie",
+      "desc_tm": "Uly neşirýatçynyň maliýe goldawy bolmazdan garaşsyz işläp düzüjiler tarapyndan döredilen.",
+      "desc_ru": "Созданы независимыми разработчиками без финансовой поддержки крупных издателей.",
+      "desc_en": "Created by independent developers without major publisher funding.",
+      "image_url": "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Arkadalar",
+      "name_ru": "Аркады",
+      "name_en": "Arcade",
+      "desc_tm": "Klassiki arcade oýunlaryndan ylhamlanan çalt depginli, ussatlyga esaslanýan oýunlar.",
+      "desc_ru": "Быстрые, основанные на навыках игры, вдохновленные классическими аркадными автоматами.",
+      "desc_en": "Fast-paced, skill-based games often inspired by classic arcade machines.",
+      "image_url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Saz/Ritm",
+      "name_ru": "Музыкальные/Ритм",
+      "name_en": "Music/Rhythm",
+      "desc_tm": "Saz bilen sinhronlaşdyrylan hereketleri ýerine ýetirmek.",
+      "desc_ru": "Выполнение действий в синхронизации с музыкой.",
+      "desc_en": "Performing actions in sync with music.",
+      "image_url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Kart we tagta oýunlary",
+      "name_ru": "Карточные и настольные",
+      "name_en": "Card & Board",
+      "desc_tm": "Fiziki kart we tagta oýunlarynyň sanly görnüşleri.",
+      "desc_ru": "Цифровые версии физических карточных и настольных игр.",
+      "desc_en": "Digital versions of physical card and board games.",
+      "image_url": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Oturylyşyk oýunlary",
+      "name_ru": "Игры для вечеринок",
+      "name_en": "Party Games",
+      "desc_tm": "Toparlar üçin döredilen, köplenç ýönekeý we güýmenje häsiýetli oýunlar.",
+      "desc_ru": "Разработаны для групп, часто простые и веселые.",
+      "desc_en": "Designed for groups, often simple and humorous.",
+      "image_url": "https://images.unsplash.com/photo-1511512578047-dba3678d9a23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "VR oýunlary",
+      "name_ru": "VR-игры",
+      "name_en": "VR Games",
+      "desc_tm": "Wirtual hakykat nauşniklerini talap edýän çuňňur tejribe.",
+      "desc_ru": "Захватывающий опыт, требующий гарнитуры виртуальной реальности.",
+      "desc_en": "Immersive experiences requiring a virtual reality headset.",
+      "image_url": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Diň goragy (Tower Defense)",
+      "name_ru": "Защита башни (Tower Defense)",
+      "name_en": "Tower Defense",
+      "desc_tm": "Duşman tolkunlaryny ýok etmek üçin gorag diňlerini gurmak we täzelemek.",
+      "desc_ru": "Строительство и улучшение оборонительных башен для уничтожения волн врагов.",
+      "desc_en": "Build and upgrade defensive towers to eliminate waves of enemies.",
+      "image_url": "https://images.unsplash.com/photo-1585506942812-e72b29cef752?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Kes we çap et (Hack and Slash)",
+      "name_ru": "Hack and Slash",
+      "name_en": "Hack and Slash",
+      "desc_tm": "Ýakyn aralykda köp sanly duşman bilen söweşmäge üns bermek.",
+      "desc_ru": "Акцент на ближнем бою против большого количества врагов.",
+      "desc_en": "Emphasis on melee combat against large numbers of enemies.",
+      "image_url": "https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Roglaýklar",
+      "name_ru": "Рогалики (Roguelike)",
+      "name_en": "Roguelike",
+      "desc_tm": "Tötänleýin döredilen derejeler we hemişelik ölüm.",
+      "desc_ru": "Случайно генерируемые уровни и перманентная смерть.",
+      "desc_en": "Randomly generated levels and permanent death.",
+      "image_url": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    },
+    {
+      "name_tm": "Metroidvaniýa",
+      "name_ru": "Метроидвания",
+      "name_en": "Metroidvania",
+      "desc_tm": "Baglanyşykly dünýäde progressiw gözleg we täze ukyplar.",
+      "desc_ru": "Прогрессивное исследование взаимосвязанного мира с новыми способностями.",
+      "desc_en": "Progressive exploration of an interconnected world with ability gating.",
+      "image_url": "https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200"
+    }
+]

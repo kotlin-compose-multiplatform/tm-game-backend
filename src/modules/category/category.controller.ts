@@ -24,7 +24,6 @@ export class CategoryController {
   constructor(private readonly categoryService: CategoryService) {}
 
   @Post('add-category')
-  @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
@@ -49,7 +48,7 @@ export class CategoryController {
   }
 
   @Patch('update-category-image/:id')
-  @UseGuards(UserGuard)
+  // @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({

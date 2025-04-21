@@ -22,7 +22,7 @@ export class ServerController {
   constructor(private readonly serverService: ServerService) {}
 
   @Post('add-server')
-  @UseGuards(UserGuard)
+  // @UseGuards(UserGuard)
   addServer(@Body() body: CreateServerDto) {
     return this.serverService.addServer(body);
   }

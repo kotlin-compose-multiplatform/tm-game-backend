@@ -8,6 +8,20 @@ import CategoryEntity from '../category/entity/category.entity';
 import UpdateGameDto from './dto/update-game.dto';
 import GetGamesDto, { SORT_BY_DATE_DESC } from './dto/get-games.dto';
 
+/**
+ * Generates a random integer between min (inclusive) and max (inclusive).
+ * @param min The minimum possible value.
+ * @param max The maximum possible value.
+ * @returns A random integer within the specified range.
+ */
+function getRandomIntInclusive(min: number, max: number): number {
+  min = Math.ceil(min);   // Ensure min is an integer (rounds up if decimal)
+  max = Math.floor(max); // Ensure max is an integer (rounds down if decimal)
+  // The maximum is inclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
 @Injectable()
 export class GameService {
   constructor(
@@ -32,6 +46,8 @@ export class GameService {
       game.site_url = body.site_url;
       game.star = body.star;
       game.steam_id = body.steam_id;
+      const randomNumberInclusive = getRandomIntInclusive(1, 30);
+      game.category = await this.categoryRepo.findOneBy({id: randomNumberInclusive});
       const result = await this.gameRepo.save(game);
       return result;
     } catch (err) {

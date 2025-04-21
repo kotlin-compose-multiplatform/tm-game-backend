@@ -27,13 +27,13 @@ export class GameController {
   constructor(private readonly gameService: GameService) {}
 
   @Post('add-game')
-  @UseGuards(UserGuard)
+  // @UseGuards(UserGuard)
   addGame(@Body() body: CreateGameDto) {
     return this.gameService.addGame(body);
   }
 
   @Put('add-game-video/:id')
-  @UseGuards(UserGuard)
+  // @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
@@ -50,7 +50,7 @@ export class GameController {
   }
 
   @Put('add-game-image/:id')
-  @UseGuards(UserGuard)
+  // @UseGuards(UserGuard)
   @UseInterceptors(
     FileInterceptor('file', {
       storage: diskStorage({
